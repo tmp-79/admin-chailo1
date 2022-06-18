@@ -1,0 +1,61 @@
+.app-table {
+    @include margin(20px, 0, 0, 0);
+    @include padding(16px, 16px, 16px, 16px);
+    border-radius: $br-8;
+    background-color: $white;
+    height: calc(100% - 108px);
+
+    .header-table {
+        @include active-flexbox(flex, center);
+
+        .title-table {
+            color: $gray1-text;
+            font-weight: 600;
+            font-size: $fs-18;
+            flex: 1
+        }
+
+        .action-btn {
+            button {
+                border-radius: 30px;
+                background-color: $black-text;
+                color: $white;
+            }
+        }
+    }
+
+    .body-table {
+        overflow: auto;
+        height: 630px;
+
+        table {
+            width: 100%;
+
+        }
+
+        &::-webkit-scrollbar {
+            display: block;
+            width: 6px;
+            height: 0px;
+            background: $white;
+            border-radius: 0 8px 8px 0;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            display: block;
+            background: $gray-text;
+            border-radius: 8px;
+        }
+
+        &:hover {
+            &::-webkit-scrollbar {
+                display: inline-block;
+                height: 4px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                display: inline-block;
+            }
+        }
+    }
+}

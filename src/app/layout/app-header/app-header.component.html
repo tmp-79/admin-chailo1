@@ -1,0 +1,79 @@
+<div class="app-header" fxLayout="row" style="display:flex" flexLayout="row">
+    <div class="app-header-left">
+        <div class="header-title">
+            <div class="icon-menu">
+                <button mat-icon-button (click)="submitEvent()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+            </div>
+            <span>Trang chủ</span>
+        </div>
+
+    </div>
+    <span fxFlex></span>
+    <div class="app-header-right">
+        <div class="mat-language">
+            <button mat-button [matMenuTriggerFor]="languageMenu">Ngôn ngữ</button>
+            <mat-menu #languageMenu="matMenu">
+                <button mat-menu-item>Việt Nam</button>
+                <button mat-menu-item>English</button>
+            </mat-menu>
+        </div>
+        <div class="header-avatar">
+            <button mat-button [matMenuTriggerFor]="avatarMenu">
+                <img src="https://scontent.fsgn4-1.fna.fbcdn.net/v/t39.30808-1/270756342_1942765182777712_5217275879306776290_n.jpg?stp=dst-jpg_p240x240&_nc_cat=103&ccb=1-6&_nc_sid=7206a8&_nc_ohc=oOX2EoslDrQAX_5xwAg&_nc_ht=scontent.fsgn4-1.fna&oh=00_AT-HSOYVo3SV-aq-Ta7tq0Jw_VSZ7nzhafA5vVv0CilaJQ&oe=6287DD2D"
+                    alt="">
+            </button>
+
+            <mat-menu #avatarMenu="matMenu">
+                <button mat-menu-item>
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">account_circle</mat-icon>
+                    <span>Thông tin cá nhân</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">key</mat-icon>
+                    <span>Đổi mật khẩu</span>
+                </button>
+            </mat-menu>
+        </div>
+        <div class="header-alert">
+            <button mat-icon-button class="icon-alert">
+                <mat-icon>notifications_off</mat-icon>
+            </button>
+            <button mat-icon-button mat-button [matMenuTriggerFor]="settingMenu">
+                <mat-icon aria-hidden="false" aria-label="Example home icon">
+                    more_horiz
+                </mat-icon>
+            </button>
+            <mat-menu #settingMenu="matMenu">
+                <button mat-menu-item>
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">settings</mat-icon>
+                    <span>Cài đặt</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">logout</mat-icon>
+                    <span>Đăng xuất</span>
+                </button>
+            </mat-menu>
+        </div>
+    </div>
+</div>
+
+<!-- <swiper
+    [slidesPerView]="3"
+    [spaceBetween]="30"
+    [pagination]="{
+      clickable: true
+    }"
+    class="mySwiper"
+  >
+    <ng-template swiperSlide>Slide 1</ng-template
+    ><ng-template swiperSlide>Slide 2</ng-template
+    ><ng-template swiperSlide>Slide 3</ng-template
+    ><ng-template swiperSlide>Slide 4</ng-template
+    ><ng-template swiperSlide>Slide 5</ng-template
+    ><ng-template swiperSlide>Slide 6</ng-template
+    ><ng-template swiperSlide>Slide 7</ng-template
+    ><ng-template swiperSlide>Slide 8</ng-template
+    ><ng-template swiperSlide>Slide 9</ng-template>
+  </swiper> -->

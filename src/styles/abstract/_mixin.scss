@@ -1,0 +1,26 @@
+@mixin border-radius($value : 0) {
+    border-radius: $value;
+}
+
+@mixin font-size($value: 0) {
+    font-size: $value;
+}
+
+@mixin padding($t: 0, $r: 0, $b: 0, $l: 0) {
+    padding-top: $t;
+    padding-right: $r;
+    padding-left: $l;
+    padding-bottom: $b
+}
+
+@mixin margin($t: 0, $r: 0, $b: 0, $l: 0) {
+    margin-top: $t;
+    margin-right: $r;
+    margin-left: $l;
+    margin-bottom: $b
+}
+
+@mixin active-flexbox($display, $align) {
+    display: $display;
+    align-items: $align;
+}

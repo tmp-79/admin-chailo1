@@ -1,0 +1,218 @@
+app-create-category {
+    width: 100%;
+
+    form {
+        .mat-form-group {
+            margin-top: 24px;
+
+            span {
+                color: $gray1-text;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 20px;
+                /* identical to box height, or 125% */
+                letter-spacing: 0.015em;
+            }
+
+            .mat-form-control {
+                &:nth-child(1) {
+                    padding-right: 8px;
+                }
+
+                &:nth-child(2) {
+                    padding-left: 8px;
+                }
+            }
+
+            input,
+            textarea {
+                border-radius: 8px;
+                background-color: $bg-gray2;
+                padding: 8px 16px;
+                width: 100%;
+                border: 1px solid #fff;
+                transition: all .2s ease;
+
+                &:focus {
+                    border: 1px solid $bg-gray1;
+                }
+            }
+
+            textarea {
+                height: 108px;
+            }
+
+            .image {
+                height: 80px;
+                background-color: $bg-gray2;
+                border-radius: 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all .2s ease;
+                border: 1px solid #fff;
+
+                img {
+                    cursor: pointer;
+                }
+
+                &:focus,
+                &:hover {
+                    border: 1px solid $bg-gray1;
+                }
+            }
+        }
+    }
+}
+
+app-detail-template {
+    width: 100%;
+
+    @mixin itemB {
+        padding: 8px;
+        gap: 10px;
+        width: 58px;
+        height: 32px;
+        background: #F3F3F4;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    @mixin font-main {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        /* identical to box height, or 100% */
+
+        letter-spacing: 0.015em;
+        color: #282828;
+
+    }
+
+    @mixin font-700 {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+        /* identical to box height, or 100% */
+
+        letter-spacing: 0.015em;
+    }
+
+    .image-list {
+        .image-main {
+            border-radius: 8px;
+            background-color: $bg-gray1;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 16px;
+            min-height: 305px;
+            height: 305px;
+
+            img {
+                border-radius: 8px;
+                height: 100%;
+                max-width: 389px;
+            }
+        }
+
+        .image-slide {
+            display: flex;
+            justify-content: space-evenly;
+            width: 60%;
+            margin: auto;
+
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+
+            margin-bottom: 16px;
+        }
+    }
+
+    .detail-template {
+        .content {
+            .title {
+                span {
+                    @include font-700;
+                    color: #282828;
+                }
+            }
+        }
+
+        .code {
+            @include font-main;
+            display: flex;
+            align-items: center;
+
+            div {
+                margin-left: 12px;
+                @include itemB;
+            }
+        }
+
+        .view {
+            @include font-main;
+            display: flex;
+            .line-v{
+                color: $bg-gray1;
+            }
+            span {
+                display: flex;
+                margin-right: 16px;
+                align-items: center;
+                img{
+                    margin-right: 12px;;
+                }
+                .quantity{
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 16px;
+                    /* identical to box height, or 100% */
+                    margin-left: 12px;
+                    letter-spacing: 0.015em;                }
+            }
+        }
+
+        .language {
+            display: flex;
+            align-items: center;
+
+            .item-lg {
+                @include itemB;
+                margin-left: 12px;
+            }
+        }
+
+        .price {
+            @include font-700;
+        }
+
+        .line {
+            height: 1px;
+            width: 100%;
+            background-color: $bg-gray1
+        }
+
+        .description {
+            span {
+                @include font-700;
+            }
+
+            span:nth-child(2) {
+                @include font-main;
+            }
+        }
+
+        .mb-16 {
+            margin-bottom: 16px;
+        }
+    }
+
+
+}

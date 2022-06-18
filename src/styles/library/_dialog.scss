@@ -1,0 +1,94 @@
+.container-dialog {}
+
+.cdk-overlay-dark-backdrop {
+  background: none !important;
+}
+
+.is-open {
+  right: 0px
+}
+
+app-wrapper-dialog {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 60px);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wrapper-container {
+  height: 100%;
+  // z-index: 999;
+  background-color: white;
+  position: absolute;
+  transition: all 0.5s;
+  right: -2550px;
+  padding: 32px;
+  width: 767px;
+  background: #FFFFFF;
+  border-radius: 16px 0px 0px 16px;
+  display: flex;
+  flex-direction: column;
+
+  .header {
+
+    span {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 40px;
+      /* identical to box height, or 154% */
+
+
+      color: #000000;
+
+    }
+  }
+
+  .body{
+    flex: 1;
+    display: flex;
+    width: 100%;
+    margin-top: 32px;
+  }
+  .action-btn {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    button {
+      padding: 16px;
+      gap: 10px;
+
+      width: 145px;
+      height: 40px;
+
+      border-radius: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border: none
+    }
+
+    .save {
+      color: #fff;
+      background: #282828;
+    }
+
+    .close {
+      color: #282828;
+      background: linear-gradient(0deg, #E5E5E5, #E5E5E5), #2667FF;
+
+    }
+  }
+}
+
+.is-open {
+  z-index: 99999;
+
+  .wrapper-container {
+    right: 265px !important;
+
+  }
+}

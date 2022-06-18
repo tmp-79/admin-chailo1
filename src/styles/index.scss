@@ -1,0 +1,13 @@
+//abstract scss
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+@import './abstract/index.scss';
+
+
+
+// layout
+@import './layout/index.scss';
+
+@import './projects/index.scss';
+@import './library/index.scss';

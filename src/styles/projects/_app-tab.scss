@@ -1,0 +1,38 @@
+.app-tab {
+    @include active-flexbox(flex, center);
+    justify-content: space-between;
+    height: 56px;
+    border-radius: $br-8;
+    background-color: $white;
+    @include padding(0,24px,0,24px);
+    .app-tab-list {
+        display: inherit;
+
+        .app-tab-item {
+            color: $gray-text;
+            font-size: $fs-16;
+            cursor: pointer;
+            @include margin(0, 32px, 0, 0);
+
+            &:first-child {
+                @include margin(0, 32px, 0, 32px);
+            }
+
+            &:last-child {
+                @include margin(0, 32px, 0, 0);
+            }
+
+            &.active {
+                color: $black-text;
+            }
+        }
+    }
+
+    .action-btn {
+        button {
+            border-radius: 30px;
+            background-color: $black-text;
+            color: $white;
+        }
+    }
+}

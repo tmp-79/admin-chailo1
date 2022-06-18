@@ -1,0 +1,157 @@
+.app-layout {
+  min-height: 100vh;
+
+  .mat-drawer-inner-container {
+    min-width: 265px;
+
+    .app-navbar {
+      width: 100%;
+
+      .app-navbar-item {
+        width: 100%;
+        height: 42px;
+
+        button {
+          width: 100%;
+          height: 100%;
+          text-align: left;
+        }
+      }
+
+      .app-header-nav {
+        height: 64px;
+        background-color: $bg-gray;
+        @include active-flexbox(flex, center);
+        justify-content: center;
+
+        .title-nav {
+          color: $white;
+          font-size: $fs-16;
+        }
+      }
+    }
+  }
+}
+
+.mat-drawer-content {
+  width: 100%;
+  height: 100vh !important;
+  overflow: hidden !important;
+  .app-header {
+    @include active-flexbox(flex, center);
+    background-color: $white;
+    color: $black-text;
+    height: 60px;
+    width: calc(100% - 255px);
+    @include padding(0, 32px, 0, 32px);
+
+    .app-header-left {
+      flex: 1;
+
+      .header-title {
+        @include active-flexbox(flex, center);
+
+        span {
+          font-size: $fs-22;
+        }
+      }
+    }
+
+    .app-header-right {
+      display: flex;
+
+      .header-alert {
+        @include active-flexbox(flex, center);
+
+        mat-icon {
+          @include margin(12px, 12px, 12px, 12px)
+        }
+
+        .icon-alert {
+          mat-icon {
+            color: red;
+          }
+        }
+
+      }
+
+      .mat-language {
+        height: 40px;
+        @include active-flexbox(flex, center);
+
+        @include margin(12px, 12px, 12px, 12px)
+      }
+
+      .header-avatar {
+        height: 40px;
+        @include active-flexbox(flex, center);
+
+
+        @include margin(12px, 12px, 12px, 12px);
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: $br-8;
+        }
+      }
+    }
+  }
+}
+
+.mat-drawer-container {
+  background-color: $bg-gray1;
+
+  .mat-drawer {
+    background-color: $primary  !important;
+
+    .app-navbar {
+      .app-navbar-item {
+        .mat-list-text {
+          @include active-flexbox(flex, center);
+          flex-direction: row;
+        }
+
+        span {
+          color: $gray-text;
+        }
+
+        .mat-icon {
+          color: $gray-text;
+          @include margin(0, 18px, 0, 18px);
+          font-size: x-large;
+        }
+      }
+    }
+  }
+
+}
+
+.app-wrapper-container {
+  position: absolute;
+  z-index: 999;
+  @include padding(32px, 32px, 16px, 32px);
+  height: calc(100% - 60px);
+  width: calc(100% - 255px);
+}
+
+.mat-list-base {
+  margin-top: 24px;
+}
+
+mat-list-single-selected-option,
+.mat-list-single-selected-option:hover,
+.mat-list-single-selected-option:focus {
+  background: $bg-gray;
+
+  .mat-list-text {
+    span {
+      color: $white  !important;
+    }
+
+    .mat-icon {
+      color: $white  !important;
+    }
+  }
+
+}

@@ -1,0 +1,14 @@
+.mat-tab-group {
+    .mat-tab-header {
+        border-bottom: 0px !important;
+    }
+
+    //line borde
+    &.mat-primary {
+        .mat-ink-bar {
+            background-color:  $black-text;
+            height: 2.5px;
+            border-radius: 4px;
+        }
+    }
+}
